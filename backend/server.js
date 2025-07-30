@@ -3,6 +3,23 @@ const app = require('./app');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
+// Function to reset database
+const resetDatabase = async () => {
+  try {
+    // Get all collections
+    const collections = await mongoose.connection.db.collections();
+    
+    // Drop all collections
+    for (let collection of collections) {
+      await collection.drop();
+    }
+    
+    console.log("Database reset: All collections dropped");
+  } catch (error) {
+    console.log("Database reset: No existing collections to drop");
+  }
+};
+
 // Try Atlas first, fallback to local MongoDB
 const connectDB = async () => {
   try {
@@ -28,6 +45,9 @@ const connectDB = async () => {
   }
 };
 
-connectDB().then(() => {
+connectDB().then(async () => {
+  // Reset database on startup
+  await resetDatabase();
+  
   app.listen(5000, () => console.log("Server running on port 5000"));
 });

@@ -198,3 +198,82 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+*.tmp
+*.temp
+
+# Package lock files (optional - uncomment if you want to ignore them)
+# package-lock.json
+# yarn.lock
+
+# Local development files
+.env.local
+.env.development
+.env.production
+
+# Log files
+*.log
+logs/
+
+# Build outputs
+build/
+dist/
+out/
+
+# IDE specific files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries/
+.idea/shelf/
+
+# Mobile app specific
+*.apk
+*.aab
+*.ipa
+*.app
+
+# Expo specific
+.expo/
+web-build/
+dist/
+
+# React Native specific
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Metro bundler
+.metro-health-check*
+
+# Flipper
+ios/Pods/
+android/.gradle
+android/app/build/
+android/build/
+android/local.properties
+android/.idea/
+android/.gradle/
+android/captures/
+android/gradlew
+android/gradlew.bat
+android/local.properties
+android/.idea/workspace.xml
+android/.idea/navEditor.xml
