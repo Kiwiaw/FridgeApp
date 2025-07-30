@@ -12,6 +12,8 @@ A full-stack React Native app with Node.js backend for managing fridge inventory
 
 ### Installation
 
+
+
 1. **Clone the repository**
    ```bash
    git clone <your-repo-url>

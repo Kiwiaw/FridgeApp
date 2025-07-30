@@ -9,37 +9,30 @@ POST http://localhost:5000/api/products
 Content-Type: application/json
 
 {
-  "name": "Milk",
+  "name": "water",
   "quantity": 5,
-  "expiration": "2024-12-31"
+  "expiration": "2024-12-31",
+  "size": "400g",
+  "status": "green"
 }
 
 ###
 
-### Test POST create another product
-POST http://localhost:5000/api/products
+### Test PUT update a product
+PUT http://localhost:5000/api/products/1
 Content-Type: application/json
 
 {
-  "name": "Bread",
-  "quantity": 2,
-  "expiration": "2024-12-25"
+  "name": "milk",
+  "quantity": 5,
+  "expiration": "2024-12-31",
+  "size": "400g",
+  "status": "green"
 }
 
-###
-
-### Test POST with invalid data (should fail)
-POST http://localhost:5000/api/products
+### Test DELETE a product
+DELETE http://localhost:5000/api/products/1
 Content-Type: application/json
 
-{
-  "name": "",
-  "quantity": -1,
-  "expiration": "2020-01-01"
-}
-
 ###
 
-### Test GET all products again (to see the new products)
-GET http://localhost:5000/api/products
-Content-Type: application/json 
